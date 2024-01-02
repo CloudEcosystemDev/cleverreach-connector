@@ -14,20 +14,11 @@ const getGroupsSuccessful = nock(`${url}/groups.json`)
 
 const createReceiverSuccessful = nock(`${url}/groups.json/${groups[0].id}/receivers`)
   .post('')
-  .reply(200, {});
+  .reply(200, { id: 'abc123' });
 
 const createReceiverFailed = nock(`${url}/groups.json/0/receivers`)
   .post('')
   .reply(500, 'Group not found');
-
-
-const updateReceiverSuccessful = nock(`${url}/groups.json/${groups[0].id}/receivers/1`)
-  .put('')
-  .reply(200, {});
-
-const updateReceiverFailed = nock(`${url}/groups.json/0/receivers/0`)
-  .put('')
-  .reply(500, 'Entry not found');
 
 
 const deleteReceiverSuccessful = nock(`${url}/groups.json/${groups[0].id}/receivers/${entryId}`)
@@ -43,8 +34,6 @@ module.exports = {
   getGroupsSuccessful,
   createReceiverSuccessful,
   createReceiverFailed,
-  updateReceiverSuccessful,
-  updateReceiverFailed,
   deleteReceiverSuccessful,
   deleteReceiverFailed,
 };

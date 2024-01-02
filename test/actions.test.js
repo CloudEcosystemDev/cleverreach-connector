@@ -1,7 +1,7 @@
 /* eslint no-unused-expressions: "off" */
 
 const { expect } = require('chai');
-const { upsertReceiver } = require('../lib/utils/helpers');
+const { insertReceiver } = require('../lib/utils/helpers');
 
 const cfg = {
   accessToken: 'TOKEN',
@@ -24,7 +24,7 @@ const {
   // deleteReceiverFailed,
 } = require('./seed/actions.seed');
 
-describe('Actions - upsertReceiver', () => {
+describe('Actions - insertReceiver', () => {
   before(async () => {
     getGroupsSuccessful;
     createReceiverSuccessful;
@@ -36,18 +36,9 @@ describe('Actions - upsertReceiver', () => {
   });
 
   it('should create a Receiver', async () => {
-    const receiver = await upsertReceiver(msg, cfg, categories);
+    const receiver = await insertReceiver(msg, cfg, categories);
     expect(receiver).to.not.be.empty;
     expect(receiver).to.be.a('object');
-    expect(receiver.metadata).to.be.a('object');
-  });
-
-  it('should update a Receiver', async () => {
-    msg.metadata.recordUid = 1;
-    const receiver = await upsertReceiver(msg, cfg, categories);
-    expect(receiver).to.not.be.empty;
-    expect(receiver).to.be.a('object');
-    expect(receiver.metadata).to.be.a('object');
-    expect(receiver.metadata.recordUid).to.equal(1);
+    expect(receiver.id).to.equal('abc123');
   });
 });
