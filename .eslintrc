@@ -1,20 +1,25 @@
 {
   "rules": {
     "no-console": "off",
-    "max-len":  ["error", { "code": 150 }]
-    },
+    "max-len": [
+      "error",
+      {
+        "code": 150
+      }
+    ]
+  },
   "env": {
-      es6: true,
-      node: true,
-      mocha: true
+    "es6": true,
+    "node": true,
+    "mocha": true
   },
   "plugins": [
-      "json",
-      "mocha"
+    "json",
+    "mocha"
   ],
   "parserOptions": {
-      "ecmaVersion": 8,
-      "sourceType": "module"
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
   "extends": "airbnb-base"
 }
