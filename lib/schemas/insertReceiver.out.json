@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier"
+        },
+        "email": {
+            "type": "string",
+            "description": "Email address"
+        },
+        "group_id": {
+            "type": "string",
+            "description": "Unique group identifier"
+        }
+    }
+}

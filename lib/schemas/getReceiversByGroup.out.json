@@ -1,0 +1,22 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Unique identifier"
+            },
+            "email": {
+                "type": "string",
+                "description": "Email address"
+            }
+        }
+    },
+    "example": [
+        {
+            "id": "1",
+            "email": "jane@doecorp.com"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 {
   "title": "CleverReach",
-  "description": "CleverReach OIH Connector",
-  "docsUrl": "https://github.com/openintegrationhub/cleverreach-connector",
+  "description": "CleverReach Flowmate Connector",
+  "docsUrl": "https://github.com/CloudEcosystemDev/cleverreach-connector",
   "buildType": "docker",
   "credentials": {
     "fields": {
@@ -42,32 +42,34 @@
     }
   },
   "triggers": {
-    "getReceiversPolling": {
-      "title": "Fetch new and updated Receivers (getReceivers - Polling)",
+    "getReceivers": {
+      "title": "Fetch new and updated Receivers (getReceivers)",
       "description": "Get Receivers from CleverReach which have recently been modified or created",
       "type": "polling",
-      "main": "./lib/triggers/getReceiversPolling.js",
+      "main": "./lib/triggers/getReceivers.js",
       "metadata": {
+        "in": "./lib/schemas/getReceivers.in.json",
         "out": "./lib/schemas/getReceivers.out.json"
       }
     },
-    "getReceiversByGroupIdPolling": {
-      "title": "Fetch new and updated Receivers with the provided GroupId (getReceiversByGroupId- Polling)",
-      "description": "Get CleverReach organizations which have recently been modified or created",
+    "getReceiversByGroup": {
+      "title": "Fetch new and updated Receivers with the provided GroupId",
+      "description": "Get CleverReach receivers which have recently been modified or created",
       "type": "polling",
-      "main": "./lib/triggers/getReceiversByGroupIdPolling.js",
+      "main": "./lib/triggers/getReceiversByGroup.js",
       "metadata": {
-        "out": "./lib/schemas/getReceiversByGroupId.out.json"
+        "in": "./lib/schemas/getReceiversByGroup.in.json",
+        "out": "./lib/schemas/getReceiversByGroup.out.json"
       }
     }
   },
   "actions": {
-    "upsertReceiver": {
-      "title": "Upsert a Receiver in CleverReach",
-      "main": "./lib/actions/upsertReceiver.js",
+    "insertReceiver": {
+      "title": "Insert a Receiver in CleverReach",
+      "main": "./lib/actions/insertReceiver.js",
       "metadata": {
-        "in": "./lib/schemas/upsertReceiver.in.json",
-        "out": "./lib/schemas/upsertReceiver.out.json"
+        "in": "./lib/schemas/insertReceiver.in.json",
+        "out": "./lib/schemas/insertReceiver.out.json"
       }
     }
   }

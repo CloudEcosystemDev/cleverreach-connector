@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "group_id": {
+            "type": "string",
+            "example": "74339"
+        },
+        "email": {
+            "type": "string",
+            "example": "jane@doecorp.com"
+        }
+    }
+}
