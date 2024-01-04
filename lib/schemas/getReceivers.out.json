@@ -10,13 +10,115 @@
             "email": {
                 "type": "string",
                 "description": "Email address"
-            }
+            },
+            "imported": {
+                "type": "number"
+            },
+            "bounced": {
+                "type": "number"
+            },
+            "group_id": {
+                "type": "string"
+            },
+            "activated": {
+                "type": "number"
+            },
+            "registered": {
+                "type": "number"
+            },
+            "last_ip": {
+                "type": "string"
+            },
+            "last_location": {
+                "type": "string"
+            },
+            "last_client": {
+                "type": "string"
+            },
+            "points": {
+                "type": "number"
+            },
+            "stars": {
+                "type": "number"
+            },
+            "source": {
+                "type": "string"
+            },
+            "attributes": {
+                "type": "object"
+            },
+            "global_attributes": {
+                "type": "object"
+            },
+            "active": {
+                "type": "boolean"
+            },
+            "conversion_rate": {
+                "type": "number"
+            },
+            "open_rate": {
+                "type": "number"
+            },
+            "click_rate": {
+                "type": "number"
+            },
+            "events": {
+                "type": "array"
+            },
+            "orders": {
+                "type": "array"
+            },
+            "tags": {
+                "type": "array"
+            },
         }
     },
     "example": [
         {
             "id": "1",
-            "email": "jane@doecorp.com"
+            "email": "jane@doecorp.com",
+            "group_id": "570909",
+            "activated": 1704208219,
+            "registered": 1704208219,
+            "deactivated": 0,
+            "last_ip": "",
+            "last_location": "",
+            "last_client": "",
+            "points": 0,
+            "stars": 0,
+            "source": "Backend (testaccounts+cleverreach@flowmate.io)",
+            "attributes": {},
+            "global_attributes": {
+                "vorname": "Jane",
+                "nachname": "Doe"
+            },
+            "active": true,
+            "conversion_rate": 0,
+            "open_rate": 0,
+            "click_rate": 0,
+            "events": [
+                {
+                    "stamp": 1704291299,
+                    "type": "log",
+                    "type_id": "",
+                    "value": "changed  by testaccounts+cleverreach@flowmate.io",
+                    "mailing_id": "0",
+                    "groups_id": "0"
+                },
+                {
+                    "stamp": 1704208219,
+                    "type": "log",
+                    "type_id": "",
+                    "value": "created  by testaccounts+cleverreach@flowmate.io",
+                    "mailing_id": "0",
+                    "groups_id": "0"
+                }
+            ],
+            "orders": [],
+            "tags": [
+                "business",
+                "IT"
+            ]
         }
     ]
 }

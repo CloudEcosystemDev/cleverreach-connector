@@ -1,13 +1,69 @@
 {
     "type": "object",
     "properties": {
-        "group_id": {
-            "type": "string",
-            "example": "74339"
-        },
         "email": {
             "type": "string",
-            "example": "jane@doecorp.com"
+            "description": "Email address"
+        },
+        "imported": {
+            "type": "number"
+        },
+        "bounced": {
+            "type": "number"
+        },
+        "group_id": {
+            "type": "string"
+        },
+        "activated": {
+            "type": "number"
+        },
+        "registered": {
+            "type": "number"
+        },
+        "last_ip": {
+            "type": "string"
+        },
+        "last_location": {
+            "type": "string"
+        },
+        "last_client": {
+            "type": "string"
+        },
+        "points": {
+            "type": "number"
+        },
+        "stars": {
+            "type": "number"
+        },
+        "source": {
+            "type": "string"
+        },
+        "attributes": {
+            "type": "object"
+        },
+        "global_attributes": {
+            "type": "object"
+        },
+        "active": {
+            "type": "boolean"
+        },
+        "conversion_rate": {
+            "type": "number"
+        },
+        "open_rate": {
+            "type": "number"
+        },
+        "click_rate": {
+            "type": "number"
+        },
+        "events": {
+            "type": "array"
+        },
+        "orders": {
+            "type": "array"
+        },
+        "tags": {
+            "type": "array"
         }
     }
 }

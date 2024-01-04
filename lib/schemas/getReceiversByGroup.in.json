@@ -3,7 +3,7 @@
     "properties": {
         "group_id": {
             "required": true,
-            "type": "integer"
+            "type": "string"
         }
     }
 }
