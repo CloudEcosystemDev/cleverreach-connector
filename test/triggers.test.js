@@ -45,8 +45,8 @@ describe('Triggers - getReceivers & getReceiversByGroupId', () => {
       lastUpdated: 0,
     };
 
-    cfg.groupId = 1;
-    const receivers = await getReceiversByGroupId(cfg, snapshot);
+    cfg.group_id = 1;
+    const receivers = await getReceiversByGroupId({}, cfg, snapshot);
 
     expect(receivers).to.not.be.empty;
     expect(receivers).to.be.an('array');
